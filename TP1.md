@@ -15,51 +15,75 @@ Si vous êtes friand de jeux et que vous voulez connaître l'intégralité des j
 
 ### Navigation dans l'arborescence des fichiers
 
-Pour cette partie je vais vous apprendre à maîtriser votre arborescence de fichier à l'aide de quelques commandes : 
-    * **cd**, pour se déplacer de dossier en dossier 
-        > *cd /dossier* qui va nous permettre de changer le répertoire courant par /dossier et d'ainsi nous déplacer
-        > *cd ..*, qui va nous déplacer dans le dossier parent de notre répertoire courant
-        > *cd -*, pour retourner dans le répertoire précédent
-        > *cd  *, sans argument pour retourner au dossier personnel
-        > *mkdir nom_du_dossier* pour créer un dossier
-        > *mkdir -p nom_du_dossier_parent/sous_dossier* pour directement créer notre dossier et ses sous-dossiers
-        > *touch nom_du_fichier* pour créer dans notre répertoire courant un nouveau fichier du nom spécifié
-        > *rm chemin_du_fichier* pour supprimer notre fichier
-        > *rmdir* pour supprimer un dossier qui se doit d'être vide
-        > *rm -r nom_du_dossier* pour supprimer notre dossier et son contenu
+Pour cette partie je vais vous apprendre à maîtriser votre arborescence de fichier à l'aide de quelques commandes :
+        * **cd**, pour se déplacer de dossier en dossier 
+        * *cd /dossier* qui va nous permettre de changer le répertoire courant par /dossier et d'ainsi nous déplacer
+        * *cd ..*, qui va nous déplacer dans le dossier parent de notre répertoire courant
+        * *cd -*, pour retourner dans le répertoire précédent
+        * *cd  *, sans argument pour retourner au dossier personnel
+        * *mkdir nom_du_dossier* pour créer un dossier
+        * *mkdir -p nom_du_dossier_parent/sous_dossier* pour directement créer notre dossier et ses sous-dossiers
+        * *touch nom_du_fichier* pour créer dans notre répertoire courant un nouveau fichier du nom spécifié
+        * *rm chemin_du_fichier* pour supprimer notre fichier
+        * *rmdir* pour supprimer un dossier qui se doit d'être vide
+        * *rm -r nom_du_dossier* pour supprimer notre dossier et son contenu
         
-        ❗ si vous essayez d'utiliser la commande *cd /votre_dossier* sans n'avoir les droits cela ne  marchera pas, par exemple vous ne pourrez pas de base accéder au dossier */root*.
+❗ Si vous essayez d'utiliser la commande *cd /votre_dossier* sans n'avoir les droits cela ne  marchera pas, par exemple vous ne pourrez pas de base accéder au dossier */root*.
         
-🚩 Lorsque que l'on veut éxécuter un programme, de base restreint par certains droits on utilise la commande *sudo le_programme_executable*. Mais :exclamation: on ne peut l'utiliser avec des commandes déjà intégrées dans notre système comme *cd*.
+🚩 Lorsque que l'on veut éxécuter un programme, de base restreint par certains droits on utilise la commande *sudo le_programme_executable* mais ❗ on ne peut l'utiliser avec des commandes déjà intégrées dans notre système comme *cd*.
 
 
 ### Commandes importantes
 
-1. La commande *date* permet d'afficher la date et l'heure actuelle. Pour ce qui est de la commande *time* retourne des statistiques de temps écoulé pour l'éxécution d'un programme ce qui nous donne une idée des ressources utilisées. 
-2. Les fichiers commençant par un point sont de base cachés de la vue de tous.
-3. La commmande *ls* se situe dans le chemin */usr/bin/ls*. Nous l'obtenons en faisant la commande *which ls*.
-4. Après recherches, la commande *ll* est un alias de la commande *ls -l*, qui permet d'afficher le long affichage détaillé de chaque fichier.
-5. On effectue la commande *ls /bin* pour afficher l'ensemble des fichiers
-6. La commande *ls ..* permet d'afficher les fichiers présents dans le répertoire parent.
-7. La commande *pwd* affiche le chemin du dossier courant.
-8. La première fois cela créer notre fichier *plop* et écris dedans le mot \*bip\*. La deuxième fois, notre fichier plop va être écraser pour laisser place à un nouveau fichier *plop* où va être encore écrit \*bip\*.
-9. La première fois cela créer notre fichier *plop* et écris dedans le mot \*bip\*. La deuxième fois, nous allons nous placer à la fin de notre fichier pour y rajouter à nouveau le mot \*bip\*.
-10. La commande *sleep 10 | echo 'toto'* va éxécuter en même temps les deux commandes, ainsi nous allons voir apparaître sur notre terminal le mot *toto* puis 10 secondes vont être attendus.
-11. La commande *file* retourne le type du fichier entré en argument, par exemple pour notre fichier *plop* cela retourne *plop: ASCII text*.
-12. Dans un premier temps, on fais la commande *echo 'Hello Toto !'> Original* pour créer notre fichier. On créer ensuite notre lien avec *ln Original lien_phy*, puis nous modifions notre fichier Original en rajoutant à la fin *Faut arrêter avec TOTO!* et qu'on regarde le contenu de lien phy avec *cat lien_phy*. Cela nous affiche bien notre fichier modifier. Après suppression du fichier *Original*, notre lien contient toujours en souvenir le contenu avant suppresion du fichier *Original*.
-13. Après création du lien symbolique et de la mofication de notre *lien_phy*, *lien_sym* est lui aussi modifié. En faisant l'inverse, la même chose se produit et les deux liens sont bien modifiés. Mais après suppresion du lien *lien_phy* le lien symbolique *lien_sym* est lui aussi supprimé.
-14. En faisant la commande *more /var/log/syslog* on utilise *Ctrl+s* pour bloquer le défilement et *Ctrl+q* pour reprendre le défilement.
-15. Pour n'afficher que les 10 premières lignes on utilise *head -10 /var/log/syslog*, pour les 15 dernières on utilise *tail -15 /var/log/syslog* et pour finir de la 10 à la 20 ème ligne on utilise *sed -n '10,20p' /var/log/syslog*. 
-16. La commande *dmesg | less* affiche les messages stockés dans le noyau sous un forme de page.
-17. Le fichier */etc/passwd* contient des informations essentielles pour chaque compte compte comme l'emplacement du fichier contenant les identifiants. Pour accéder à la page manuel de ce fichier on fait la commande *man /etc/passwd*.
-18. On utilise la commande *awk -F":" '{print $1}' /etc/passwd | sort -r* pour n'afficher que la première colonne triée dans le sens inverse.
-19. On tape la commande getent qui affiche toutes les entrés contenues dans /etc/passwd et je les envoie à la commande wc pour compter le nombre de ligne : *getent passwd | wc -l*.
-20. La commande *man -wK conversion|wc -l* nous permet de nous retourner l'ensemble des pages des manuels contenant un certain mot, dans notre cas conversion et de les compter.
-21. Grâce à la commande *find / -name passwd|wc -l* on sait que 20 fichiers se nomment passwd sont présents sur la machine. Le */* correspond à l'ensemble des fichiers présents sur la machine.
-22. En faisant cela : *find / -name passwd > list_passwd_files.txt* et *find / -name passwd 2> /dev/null* nos fichiers recherchés seront envoyés dans notre fichier list_paswd et nos erreurs dans *dev/null*.
-23. L'alias ll est défini dans le fichier *.bashrc* que l'on trouve en effectuant la commande *grep -r "alias ll"*.
-24. Le fichier history.log se trouve dans le chemin */var/log/apt/history.log*.
-25. En faisant la commande locate, notre fichier ne ressort pas ainsi cela est dû car locate se base sur une base de donnée qui contient la liste de tous les fichiers et qui est répertorié que quotidiennement.
+Les commandes qui vont nous être utiles dans cette partie sont les suivantes: 
+   * *date* nous retourne la date et l'heure actuelle
+   * *time* renvoie le temps écoulé pour l'éxécution d'un programme
+   * *ls répertoire* pour afficher les fichiers présents dans un répertoire
+      * *ls ..* affiche les fichiers du répertoire parent
+   * *pwd* pour afficher le chemin du dossier courant
+   * *file fichier* retourne le type du fichier entré en argument
+   * *ln fichier nom_du_lien* qui va créer un lien physique à notre fichier 
+   * *ln -s fichier nom_du_lien* qui va créer un lien symbolique à notre fichier 
+   * *head -nombre_de_ligne chemin_du_fichier* pour afficher les x premières lignes d'un fichier
+   * *tail -nombre_de_ligne chemin_du_fichier* pour afficher les x dernières lignes d'un fichier
+   * *dmesg* affiche les messages stockés dans le noyau 
+   * *less* permet de visualiser un fichier texte page par page
+   * *man nom_page* pour accéder à la page du manuel en question
+   * *getent* pour voir tous les comptes utilisateurs 
+   * *wc -l* compte le nombre de ligne d'un fichier donné en entré
+   * *find repertoire_dans_lequel_on_fais_notre_recherche -mot_a_trouve* qui nous retourne tous les fichiers ayant comme nom le mot recherché dans le répertoire passé en entrée
+   * *grep "chaine"* recherche une chaine de caractères dans un fichier
+   * *locate fichier* recherche dans sa base de donnée (actualisé chaque jour automatiquement), l'emplacement de notre fichier
+   
+   🚩 # A Savoir
+   
+   Un lien physique est une copie qui continue d'existe même après la suppresion de notre fichier alors qu'un lien symbolique est en quelque sorte un pointeur vers notre fichier. Ainsi, si cette fois on décide de supprimer notre fichier, ce lien pointera vers un fichier inexistant.
+   
+   Un fichier précédé par un . signifie qu'il n'est pas de base visible de tous.
+   
+   Le fichier */etc/passwd* contient des informations essentielles pour chaque compte compte comme l'emplacement du fichier contenant les identifiants
+   
+   💡 # Astuces 
+   
+   Pour créer un fichier à partir d'une phrase on peut faire *echo 'notre_phrase' > nom_du_fichier*.
+   
+   Le chevron fermant *>* nous permet de dirigier le résultat de notre commande à gauche vers notre fichier passé en argument mais ❗ cela écrase le contenu du fichier si celui-ci n'était pas vide.
+   
+   Pour envoyer la sortie d'erreur dans un fichier on utilise *2> fichier_cible*.
+   
+   On peut aussi avec le pipe *|* traiter de manières séquentielles plusieurs commandes et envoyer le résultat de sortie d'un programme à l'entrée d'une autre.
+   Exemple : *sleep 10 | echo 'toto'*
+   
+   📝 # Raccourcis utiles
+   
+   * *Ctrl + s* pour bloquer le défilement lors de la consultation d'un fichier
+   * A l'inverse *Ctrl + q* pour reprendre le défilement 
+
+   💬 # Exemple de commande
+   
+   * *awk -F":" '{print $1}' /etc/passwd | sort -r* pour n'afficher que la première colonne triée dans le sens inverse.
+   * *man -wK mot_recherché|wc -l* nous permet de nous retourner l'ensemble des pages des manuels contenant un certain mot, dans notre cas conversion et de les compter.
+   
 
 ## Exercice 3
 
@@ -67,7 +91,9 @@ On utilise cp pour copier le fichier dans notre dossier personnel. Ensuite il no
 
 ## Exercice 4
 
-Après avoir créer notre backup on modifer nore fichier bashrc et on recherche notre ligne avec *CTRLK + W* et on décommente la ligne. Puis, en rechargeant le shell avec *source .bashrc* notre shell est maintenant coloré.
+Après avoir créer notre backup on modife notre fichier bashrc et on recherche notre ligne avec *CTRLK + W* et on décommente la ligne. 
+
+Puis, en rechargeant le shell avec *source .bashrc* notre shell est maintenant coloré.
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;92m\]\u@\h\[\033[00m\]:\[\033[01;96m\]\w\[\033[00m\]\$ '
 
