@@ -14,7 +14,7 @@ Tout d'abord à quoi ça sert?
 
 Tout simplement à éxécuter des tâches répétitives en un seul appel de fonction.
 
-Nous allons pour appeler notre script utiliser *./mon_script.sh mon_parametre*. 
+Nous allons pour appeler notre script utiliser `./mon_script.sh mon_parametre`. 
 En écrivant cela, nous allons appeler notre script bash en lui passant un parmètre qu'il va pouvoir utiliser avec *$1*.
 
 
