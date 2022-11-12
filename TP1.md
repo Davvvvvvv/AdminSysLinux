@@ -80,7 +80,7 @@ Les commandes qui vont nous être utiles dans cette partie sont les suivantes:
    On peut aussi avec le pipe `|` traiter de manières séquentielles plusieurs commandes et envoyer le résultat de sortie d'un programme à l'entrée d'une autre.
    Exemple : `sleep 10 | echo 'toto'`
    
-###📝 Raccourcis utiles
+### 📝 Raccourcis utiles
    
    * _Ctrl + s_ pour bloquer le défilement lors de la consultation d'un fichier
    * A l'inverse _Ctrl + q_ pour reprendre le défilement 
