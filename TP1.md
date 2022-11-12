@@ -20,17 +20,17 @@ Si vous êtes friand de jeux et que vous voulez connaître l'intégralité des j
 ### Navigation dans l'arborescence des fichiers
 
 Pour cette partie je vais vous apprendre à maîtriser votre arborescence de fichier à l'aide de quelques commandes:
-       * `cd`, pour se déplacer de dossier en dossier 
-       * `cd /dossier` qui va nous permettre de changer le répertoire courant par /dossier et d'ainsi nous déplacer
-       * `cd ..`, qui va nous déplacer dans le dossier parent de notre répertoire courant
-       * `cd -`, pour retourner dans le répertoire précédent
-       * `cd  `, sans argument pour retourner au dossier personnel
-       * `mkdir nom_du_dossier` pour créer un dossier
-       * `mkdir -p nom_du_dossier_parent/sous_dossier` pour directement créer notre dossier et ses sous-dossiers
-       * `touch nom_du_fichier` pour créer dans notre répertoire courant un nouveau fichier du nom spécifié
-       * `rm chemin_du_fichier` pour supprimer notre fichier
-       * `rmdir` pour supprimer un dossier qui se doit d'être vide
-       * `rm -r nom_du_dossier` pour supprimer notre dossier et son contenu
+   * `cd`, pour se déplacer de dossier en dossier 
+   * `cd /dossier` qui va nous permettre de changer le répertoire courant par /dossier et d'ainsi nous déplacer
+   * `cd ..`, qui va nous déplacer dans le dossier parent de notre répertoire courant
+   * `cd -`, pour retourner dans le répertoire précédent
+   * `cd  `, sans argument pour retourner au dossier personnel
+   * `mkdir nom_du_dossier` pour créer un dossier
+   * `mkdir -p nom_du_dossier_parent/sous_dossier` pour directement créer notre dossier et ses sous-dossiers
+   * `touch nom_du_fichier` pour créer dans notre répertoire courant un nouveau fichier du nom spécifié
+   * `rm chemin_du_fichier` pour supprimer notre fichier
+   * `rmdir` pour supprimer un dossier qui se doit d'être vide
+   * `rm -r nom_du_dossier` pour supprimer notre dossier et son contenu
         
 ❗ Si vous essayez d'utiliser la commande `cd /votre_dossier` sans n'avoir les droits cela ne marchera pas, par exemple vous ne pourrez pas de base accéder au dossier `/root`.
         
