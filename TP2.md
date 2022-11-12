@@ -7,6 +7,9 @@
    * `printenv` pour afficher toutes les variables d'environnements
    * `echo $ma_variable` pour afficher le contenu de notre variable locale
    * `bash` pour entrer dans un script bash sans quitter notre terminal (*exit* pour terminer notre script)
+   * `export ma_var="contenu"` créé une variable d'environnement
+   * `ma_var="contenu"` pour créer une variable locale
+   * `unset ma_var` pour supprimer une variable
   
 ### Fonctionnement des scripts bash
 
