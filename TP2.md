@@ -4,9 +4,9 @@
 
 ### 📝 Commandes utiles
 
-   *printenv* pour afficher toutes les variables d'environnements
-   *echo $ma_variable* pour afficher le contenu de notre variable locale
-   *bash* pour entrer dans un script bash sans quitter notre terminal (*exit* pour terminer notre script)
+   * `printenv` pour afficher toutes les variables d'environnements
+   * `echo $ma_variable` pour afficher le contenu de notre variable locale
+   * `bash` pour entrer dans un script bash sans quitter notre terminal (*exit* pour terminer notre script)
   
 ### Fonctionnement des scripts bash
 
