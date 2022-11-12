@@ -11,7 +11,9 @@
 
 Pour retrouver le chemin d'une commande en particulier, on peut utiliser la commande *which notre_commande*. 
 
-Il nous arrive parfois de chercher dans un manuel une partie en particulier en utilisant la molette mais pour gagner du temps il nous suffit de taper `/notre mot` et cela va surligner les mots correspondants dans notre page. Après avoir trouvé le mot que l'on recherchait, nous pouvons ainsi quitter notre manuel à l'aide de la touche _*q*_, abréviation de quit. 
+Il nous arrive parfois de chercher dans un manuel une partie en particulier en utilisant la molette mais pour gagner du temps il nous suffit de taper `/notre mot` et cela va surligner les mots correspondants dans notre page. 
+
+Après avoir trouvé le mot que l'on recherchait, nous pouvons ainsi quitter notre manuel à l'aide de la touche _*q*_, abréviation de quit. 
 
 Si vous êtes friand de jeux et que vous voulez connaître l'intégralité des jeux déjà présent sur notre système, on peut consulter la première page du manuel de la section 6.
 
@@ -30,7 +32,7 @@ Pour cette partie je vais vous apprendre à maîtriser votre arborescence de fic
         * `rmdir` pour supprimer un dossier qui se doit d'être vide
         * `rm -r nom_du_dossier` pour supprimer notre dossier et son contenu
         
-❗ Si vous essayez d'utiliser la commande `cd /votre_dossier` sans n'avoir les droits cela ne  marchera pas, par exemple vous ne pourrez pas de base accéder au dossier `/root`.
+❗ Si vous essayez d'utiliser la commande `cd /votre_dossier` sans n'avoir les droits cela ne marchera pas, par exemple vous ne pourrez pas de base accéder au dossier `/root`.
         
 🚩 Lorsque que l'on veut éxécuter un programme, de base restreint par certains droits on utilise la commande `sudo le_programme_executable` mais ❗ on ne peut l'utiliser avec des commandes déjà intégrées dans notre système comme `cd`.
 
@@ -59,7 +61,9 @@ Les commandes qui vont nous être utiles dans cette partie sont les suivantes:
    
 ### 🚩 A Savoir
    
-   Un lien physique est une copie qui continue d'existe même après la suppresion de notre fichier alors qu'un lien symbolique est en quelque sorte un pointeur vers notre fichier. Ainsi, si cette fois on décide de supprimer notre fichier, ce lien pointera vers un fichier inexistant.
+   Un lien physique est une copie qui continue d'existe même après la suppresion de notre fichier alors qu'un lien symbolique est en quelque sorte un pointeur vers notre fichier. 
+   
+   Ainsi, si cette fois on décide de supprimer notre fichier, ce lien pointera vers un fichier inexistant.
    
    Un fichier précédé par un `.` signifie qu'il n'est pas de base visible de tous.
    
@@ -89,7 +93,9 @@ Les commandes qui vont nous être utiles dans cette partie sont les suivantes:
 
 ## Exercice 3
 
-On utilise cp pour copier le fichier dans notre dossier personnel. Ensuite il nous suffit d'utiliser la commande *Ctrlk+\* pour pouvoir rechercher notre mot kernel et le remplacer par noyau. Pour déplacer nos 10 lignes, on selectionne tout simplement nos 10 lignes qu'on va couper et coller à la fin du fichier. Pour au final l'annuler avec _ALT + U_ et ensuite l'enregistrer avec _CTRL+O_ et _CTRLK+X_.
+On utilise cp pour copier le fichier dans notre dossier personnel. Ensuite il nous suffit d'utiliser la commande *Ctrlk+\* pour pouvoir rechercher notre mot kernel et le remplacer par noyau. 
+
+Pour déplacer nos 10 lignes, on selectionne tout simplement nos 10 lignes qu'on va couper et coller à la fin du fichier. Pour au final l'annuler avec _ALT + U_ et ensuite l'enregistrer avec _CTRL+O_ et _CTRLK+X_.
 
 ## Exercice 4
 
